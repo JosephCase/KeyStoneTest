@@ -13,11 +13,11 @@ keystone.init({
 	'name': 'KeystoneTest',
 	'brand': 'KeystoneTest',
 
-	'less': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
-	'view engine': 'pug',
+	// 'less': 'public',
+	// 'static': 'public',
+	// 'favicon': 'public/favicon.ico',
+	// 'views': 'templates/views',
+	// 'view engine': 'pug',
 
 	'auto update': true,
 	'session': true,
