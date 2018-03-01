@@ -29,16 +29,11 @@ keystone.pre('render', middleware.flashMessages);
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.get('/api/*', function(req, res) {
-		var Testimo = keystone.list('Testimo');
-		Testimo.model.find().exec()
+	app.get('/testimonials', function(req, res) {
+		keystone.list('Testimonial').model.find().exec()
 		.then((testimonials) => {
-			console.log(testimonials);
 			res.json(testimonials);
 		})
-	});
-	app.get('*', function(req, res) {
-		res.send('Serve my bundle');
 	});
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
