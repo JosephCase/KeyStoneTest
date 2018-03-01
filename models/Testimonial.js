@@ -5,9 +5,7 @@ var Types = keystone.Field.Types;
  * Testimonial Model
  * ==========
  */
-var Testimonial = new keystone.List('Testimonial', {
-	autokey: { from: 'name', path: 'key', unique: true }
-});
+var Testimonial = new keystone.List('Testimonial');
 
 Testimonial.add({
 	name: { type: Types.Text, initial: true, required: true },
